@@ -1,0 +1,109 @@
+@import '../../../index.scss';
+
+
+.client-card {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $highlight-grey;
+    @include flexbox;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px;
+
+
+    &__img {
+        width: 100%;
+        @include flexbox;
+        flex-direction: column;
+        align-items: flex-start;
+        // border : 1px solid navy;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__name {
+        width: 100%;
+        @include flexbox;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h5 {
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 10px;
+            font-weight: 100;
+        }
+    }
+
+    &__desc {
+        width: 100%;
+        font-size: 10px;
+        margin: 10px 0;
+
+        p {
+            text-align: left;
+            color: $newsletter-grey;
+        }
+
+    }
+}
+
+@media(min-width : $small-size) {
+
+    .client-card {
+
+
+        &__name {
+            margin: 5px 0;
+
+            h5 {
+                font-size: 17px;
+                font-weight: 400;
+            }
+
+            p {
+                font-size: 12px;
+                font-weight: 100;
+            }
+        }
+
+        &__desc {
+            font-size: 12px;
+
+        }
+    }
+
+}
+
+@media(min-width : $medium-size) {
+
+    .client-card {
+
+
+        &__name {
+            margin: 5px 0;
+
+            h5 {
+                font-size: 20px;
+                font-weight: 400;
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: 100;
+            }
+        }
+
+        &__desc {
+            font-size: 15px;
+
+        }
+    }
+
+}

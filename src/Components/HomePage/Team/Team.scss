@@ -1,0 +1,116 @@
+@import '../../../index.scss';
+
+.team {
+    width: 100%;
+    padding: 10px;
+    background-color: $main-background;
+    color: $white-color;
+    // border: 1px solid red;
+
+
+    &__title {
+        text-align: center;
+        font-size: 17px;
+    }
+
+    &__mates {
+        width: 95%;
+        margin: 2vh auto;
+        // border: 1px solid green;
+        @include flexbox;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        &__card {
+            width: 45%;
+            @include flexbox;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 10px;
+            cursor: pointer;
+            // border : 1px solid blue;
+
+            .image {
+                flex: 0.4;
+                @include flexbox;
+
+                img {
+                    width: 85%;
+                }
+            }
+
+            .info {
+                flex: 0.6;
+                text-align: center;
+
+                p {
+                    color: $newsletter-grey;
+                    margin: 3px 0;
+                }
+
+            }
+        }
+
+        .active {
+            background-color: $highlight-yellow;
+            color: black;
+
+            p {
+                color: $main-background;
+            }
+        }
+    }
+}
+
+@media (min-width : $small-size) {
+    .team {
+
+        &__title {
+            font-size: 22px;
+        }
+
+        &__mates {
+            width: 80%;
+
+            &__card{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+
+@media (min-width : $medium-size) {
+    .team {
+
+        padding: 7vh 20px;
+
+        &__title {
+            font-size: 35px;
+        }
+
+        &__mates {
+            width: 75%;
+            margin: 4vh auto;
+
+            &__card{
+                width : 25%;
+                margin: 30px 10px;
+                font-size: 16px;
+
+                .image{
+                    img {
+                        width: 60%;
+                    }
+                }
+
+                .info{
+
+                    h4{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,136 @@
+@import '../../../index.scss';
+
+
+.footer {
+    width: 100%;
+    padding: 20px;
+    background-color: $footer-background;
+    color: $white-color;
+    @include flexbox;
+    flex-direction: column;
+
+    &__top {
+        // border: 1px solid red;
+        width: 100%;
+        @include flexbox;
+        justify-content: space-between;
+
+        img {
+            width: 40px;
+        }
+
+        .footer__links {
+            font-size: 7px;
+            // border: 1px solid green;
+
+            span {
+                margin: 0px 5px;
+            }
+        }
+
+        .footer__socials {
+            color: $highlight-yellow;
+
+            .icon {
+                margin: 0 2px;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    &__bottom {
+        width: 100%;
+        margin-top: 20px;
+        @include flexbox;
+        // border: 1px solid red;
+
+        span {
+            font-size: 7px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-weight: 100;
+        }
+
+        span:hover {
+            color: $highlight-yellow;
+        }
+    }
+}
+
+@media (min-width : $small-size) {
+
+    .footer {
+        padding: 4vh;
+
+        &__top{
+
+            img{
+                width : 80px;
+            }
+
+            .footer__links{
+                span{
+                    font-size: 10px;
+                    margin: 0 7px;
+                }
+            }
+
+            .footer__socials{
+                .icon{
+                    font-size: 15px;
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        &__bottom{
+
+            span{
+                font-size: 10px;
+                margin: 0 7px;
+            }
+        }
+    }
+
+}
+
+
+@media (min-width : $medium-size) {
+
+    .footer {
+        padding: 7vh;
+
+        &__top{
+
+            img{
+                width : 120px;
+            }
+
+            .footer__links{
+                span{
+                    font-size: 15px;
+                    margin: 0 10px;
+                }
+            }
+
+            .footer__socials{
+                .icon{
+                    font-size: 20px;
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        &__bottom{
+
+            margin-top: 7vh;
+
+            span{
+                font-size: 15px;
+                margin: 0 7px;
+            }
+        }
+    }
+
+}

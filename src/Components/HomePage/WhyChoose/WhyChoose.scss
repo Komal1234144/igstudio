@@ -1,0 +1,145 @@
+@import '../../../index.scss';
+
+.why-choose {
+    width: 100%;
+    padding: 5vh 3vh;
+    background-color: $main-background;
+    @include flexbox;
+    flex-direction: column;
+    cursor: pointer;
+    // border: 1px solid red;
+
+    &__title {
+        text-align: center;
+        color: $white-color;
+        font-size: 15px;
+        margin: 3vh 0;
+    }
+
+    &__cards {
+        @include flexbox;
+        flex-direction: column;
+    }
+
+    &__card,
+    &__card--selected {
+        width: 60%;
+        margin: 10px auto;
+        padding: 15px;
+        border-radius: 20px;
+        background-color: transparent;
+        border: 1px solid $highlight-grey;
+        // border: 1px solid green;
+
+        &__img {
+            width: 100%;
+            // border: 1px solid blue;
+
+            img {
+                width: 20%;
+            }
+        }
+
+        &__info {
+            margin-top: 10px;
+
+            b {
+                color: $white-color;
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            p {
+                color: $newsletter-grey;
+                margin: 5px 0;
+            }
+        }
+
+        &__btn {
+            width: 100%;
+            // border: 1px solid red;
+
+            button {
+                width: auto;
+                border: none;
+                background-color: $highlight-yellow;
+                padding: 5px 10px;
+                border-radius: 20px;
+                cursor: pointer;
+                font-size: 10px;
+                font-weight: 700;
+            }
+        }
+
+    }
+
+    &__card--selected {
+        background-color: $highlight-grey;
+        border: none;
+    }
+
+}
+
+@media (min-width : $small-size) {
+    .why-choose {
+
+        &__title {
+            font-size: 22px;
+        }
+
+        &__cards {
+            @include flexbox;
+            flex-direction: row;
+        }
+
+        &__card,
+        &__card--selected {
+            width: 28%;
+        }
+    }
+}
+
+@media (min-width : $medium-size) {
+    .why-choose {
+
+        padding: 10vh 3vh;
+
+        &__title {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        &__card,
+        &__card--selected {
+            width: 25%;
+            margin: 10px;
+
+
+            &__img {
+                img {
+                    width: 30%;
+                }
+            }
+
+            &__info {
+                margin: 20px 0;
+
+                b {
+                    font-size: 22px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+            }
+
+            &__btn {
+
+                button {
+                    font-size: 15px;
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+}

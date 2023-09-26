@@ -1,0 +1,122 @@
+@import '../../../index.scss';
+
+.faq {
+    width: 100%;
+    padding: 10px;
+    background-color: $main-background;
+    @include flexbox;
+    flex-direction: column;
+    color: $white-color;
+    // border: 1px solid red;
+
+    &__left {
+        width: 70%;
+        margin: 20px 0;
+        // border: 1px solid green;
+
+        h1 {
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            color: $newsletter-grey;
+            font-size: 10px;
+            margin: 5px 0;
+        }
+    }
+
+    &__right {
+        width: 90%;
+        // border: 1px solid green;
+
+        .accordion {
+            width: 80%;
+            margin: 0 auto !important;
+            background-color: $main-background;
+            color: $white-color;
+            font-size: 12px;
+            border: none;
+            border-bottom: 1px solid $newsletter-grey;
+            box-shadow: none !important;
+            padding: 10px;
+        }
+
+        .icon {
+            color: $highlight-yellow;
+            cursor: pointer;
+        }
+
+        .details {
+            color: $newsletter-grey;
+            font-size: 10px;
+        }
+    }
+
+
+}
+
+@media (min-width : $small-size) {
+
+    .faq {
+        padding: 3vh 20px;
+        flex-direction: row;
+        align-items: stretch;
+
+        &__left {
+            flex: 0.4;
+
+            h1 {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+        }
+
+        &__right {
+            flex: 0.6;
+        }
+    }
+
+}
+
+
+@media (min-width : $medium-size) {
+
+    .faq {
+        padding: 7vh 20px;
+        flex-direction: row;
+
+
+        &__left {
+            flex: 0.3;
+
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+
+        &__right {
+            flex: 0.6;
+
+            .accordion {
+                font-size: 17px;
+            }
+
+            .icon {
+                font-size: 20px;
+            }
+
+            .details {
+                font-size: 14px;
+            }
+        }
+    }
+
+}

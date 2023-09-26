@@ -1,0 +1,191 @@
+@import '../../../index.scss';
+
+
+.hero {
+    width: 100%;
+    padding: 10px;
+    // border: 1px solid red;
+    background-color: $hero-background;
+    color: $white-color;
+    @include flexbox;
+    margin-top: 70px;
+    // align-items: stretch;
+
+    &__left,
+    &__right {
+        flex: 0.5;
+    }
+
+
+    &__left {
+        @include flexbox;
+        flex-direction: column;
+        // border: 1px solid red;
+
+        #title {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        #title-focus {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 7px;
+            margin: 10px 0;
+            width: 70%;
+            text-align: left;
+            color: $newsletter-grey;
+        }
+
+        &__cta {
+            @include flexbox;
+            justify-content: space-between;
+            width: 70%;
+            margin-top: 7px;
+            font-size: 5px;
+            background-color: $main-background;
+            border-radius: 20px;
+            color: $newsletter-grey;
+            // border: 1px solid red;
+
+            &__email {
+                @include flexbox;
+                padding: 0 5px;
+            }
+
+            .icon {
+                font-size: 8px;
+            }
+
+            button {
+                border-radius: 10px;
+                background-color: $highlight-yellow;
+                font-size: 5px;
+                font-weight: 700;
+                border: none;
+                padding: 2px 5px;
+            }
+        }
+    }
+
+    &__right {
+
+        @include flexbox;
+        // border: 1px solid red;
+
+        img {
+            width: 60%;
+        }
+    }
+
+}
+
+
+@media (min-width : $small-size) {
+    .hero {
+
+        padding: 20px 0;
+
+        &__left {
+            #title {
+                font-size: 25px;
+            }
+
+            #title-focus {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 14px;
+                width: 60%;
+                margin-top: 20px;
+            }
+
+            &__cta {
+                width: auto;
+                font-size: 12px;
+                // padding : 10px 0;
+
+                &__email {
+                    padding: 0 10px;
+                }
+
+                .icon {
+                    font-size: 15px;
+                    margin-right: 10px;
+                }
+
+                button {
+                    font-size: 12px;
+                    padding: 5px 10px;
+                }
+            }
+        }
+
+        &__right {
+            img {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media (min-width : $medium-size) {
+    .hero {
+
+        padding: 20px 0;
+        padding-bottom: 10vh;
+        margin-top: 100px;
+
+        &__left {
+
+            flex: 0.4;
+
+            #title {
+                font-size: 45px;
+            }
+
+            #title-focus {
+                font-size: 45px;
+            }
+
+            p {
+                font-size: 17px;
+                width: 55%;
+                margin-top: 7vh;
+            }
+
+            &__cta {
+                width: auto;
+                font-size: 17px;
+                margin-top: 7vh;
+
+                &__email {
+                    padding: 0 10px;
+                }
+
+                .icon {
+                    font-size: 25px;
+                    margin-right: 10px;
+                }
+
+                button {
+                    font-size: 17px;
+                    padding: 10px;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        &__right {
+            flex: 0.6;
+
+            img {
+                width: 45%;
+            }
+        }
+    }
+}

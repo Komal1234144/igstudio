@@ -1,0 +1,119 @@
+@import '../../../index.scss';
+
+.header {
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    // border: 1px solid red;
+    background-color: $hero-background;
+    color: $white-color;
+    @include flexbox;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+
+    &__logo {
+        flex: 0.2;
+        @include flexbox;
+        // border: 1px solid red;
+
+        img {
+            width: 90%;
+            object-fit: contain;
+        }
+    }
+
+    &__links {
+        flex: 0.6;
+        @include flexbox;
+        // border: 1px solid red;
+
+        span {
+            margin: 0 5px;
+            font-size: 8px;
+            cursor: pointer;
+        }
+
+        span:hover {
+            color: $highlight-yellow;
+        }
+
+    }
+
+    &__button {
+        flex: 0.2;
+        @include flexbox;
+        // border: 1px solid red;
+
+        button {
+            background-color: transparent;
+            border: 2px solid $white-color;
+            color: $white-color;
+            font-size: 7px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: $highlight-yellow;
+            border: 2px solid $highlight-yellow;
+        }
+
+    }
+}
+
+@media (min-width : $small-size) {
+    .header {
+
+
+        &__logo {
+            img {
+                width: 70%;
+            }
+        }
+
+        &__links {
+            span {
+                font-size: 15px;
+                margin: 7px;
+            }
+        }
+
+        &__button {
+            button {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+@media (min-width : $medium-size) {
+    .header {
+
+        height: 100px;
+
+        &__logo {
+            justify-content: flex-end;
+
+            img {
+                width: 50%;
+            }
+        }
+
+        &__links {
+            span {
+                font-size: 17px;
+                margin: 0 25px;
+            }
+        }
+
+        &__button {
+            justify-content: flex-start;
+
+            button {
+                font-size: 17px;
+            }
+        }
+    }
+}

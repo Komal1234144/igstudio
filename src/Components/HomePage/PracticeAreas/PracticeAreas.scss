@@ -1,0 +1,337 @@
+@import '../../../index.scss';
+
+.areas {
+    width: 100%;
+    background-color: $main-background;
+    padding: 20px;
+    color: $white-color;
+    // border: 1px solid red;
+
+    h1 {
+        text-align: center;
+        font-size: 17px;
+        margin: 20px 0;
+    }
+
+    &-container {
+        width: 100%;
+        height: auto;
+        margin: 40px auto;
+        // border: 4px solid green;
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        grid-template-rows: 100px 100px 100px;
+        gap: 7px;
+        font-size: 8px;
+
+        #corporate,
+        #partnership,
+        #realEstate,
+        #business,
+        #landlordDispute,
+        #elderAbuse {
+
+            img {
+                border-radius: 10px;
+            }
+
+        }
+
+        #corporate {
+            grid-column: 1/3;
+            grid-row: 1/2;
+            position: relative;
+            // border: 2px solid blue;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            span {
+                position: absolute;
+                top: 70%;
+                left: 30%;
+            }
+        }
+
+        #partnership {
+            grid-column: 3/4;
+            grid-row: 1/2;
+            position: relative;
+            // border: 2px solid blue;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            span {
+                position: absolute;
+                top: 70%;
+                left: 15%;
+            }
+        }
+
+        #realEstate {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            position: relative;
+            // border: 2px solid blue;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            span {
+                position: absolute;
+                top: 70%;
+                left: 15%;
+            }
+        }
+
+        #business {
+            grid-column: 2/4;
+            grid-row: 2/3;
+            position: relative;
+            // border: 2px solid blue;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            span {
+                position: absolute;
+                top: 70%;
+                left: 40%;
+            }
+        }
+
+        #landlordDispute {
+            grid-column: 1/3;
+            grid-row: 3/4;
+            position: relative;
+            // border: 2px solid blue;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            span {
+                position: absolute;
+                top: 70%;
+                left: 30%;
+            }
+        }
+
+        #elderAbuse {
+            grid-column: 3/4;
+            grid-row: 3/4;
+            position: relative;
+            // border: 2px solid blue;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            span {
+                position: absolute;
+                top: 70%;
+                left: 30%;
+            }
+        }
+    }
+}
+
+
+@media (min-width : $small-size) {
+
+    .areas {
+
+        h1 {
+            font-size: 22px;
+            margin: 30px 0;
+        }
+
+        &-container {
+            width: 80%;
+            grid-template-columns: 30% 30% 30%;
+            grid-template-rows: 150px 150px 150px;
+            gap: 2%;
+            justify-content: center;
+            font-size: 10px;
+
+            #corporate {
+
+                img {
+                    object-fit: cover;
+                }
+
+            }
+
+            #partnership {
+
+                img {
+                    object-fit: cover;
+                }
+
+            }
+
+            #realEstate {
+
+                img {
+
+                    object-fit: cover;
+                }
+
+            }
+
+            #business {
+
+                img {
+                    object-fit: cover;
+                }
+
+            }
+
+            #landlordDispute {
+
+                img {
+                    object-fit: cover;
+                }
+
+            }
+
+            #elderAbuse {
+
+                img {
+                    object-fit: cover;
+                }
+
+            }
+        }
+    }
+
+}
+
+
+@media (min-width : $medium-size) {
+
+
+    .areas {
+
+        h1 {
+            font-size: 28px;
+            margin: 30px 0;
+        }
+
+        &-container {
+            width: 80%;
+            grid-template-rows: 180px 180px 180px;
+            gap: 15px;
+            font-size: 16px;
+
+            #corporate {
+
+                img {
+                    object-fit: cover;
+                }
+
+                span {
+                    position: absolute;
+                    top: 70%;
+                    left: 40%;
+                }
+
+            }
+
+            #partnership {
+
+                img {
+                    object-fit: cover;
+                }
+
+
+                span {
+                    position: absolute;
+                    top: 70%;
+                    left: 20%;
+                }
+
+            }
+
+            #realEstate {
+
+                img {
+
+                    object-fit: cover;
+                }
+
+
+                span {
+                    position: absolute;
+                    top: 70%;
+                    left: 20%;
+                }
+
+            }
+
+            #business {
+
+                img {
+                    object-fit: cover;
+                }
+
+
+                span {
+                    position: absolute;
+                    top: 70%;
+                    left: 40%;
+                }
+
+            }
+
+            #landlordDispute {
+
+                img {
+                    object-fit: cover;
+                }
+
+
+                span {
+                    position: absolute;
+                    top: 70%;
+                    left: 35%;
+                }
+
+            }
+
+            #elderAbuse {
+
+                img {
+                    object-fit: cover;
+                }
+
+
+                span {
+                    position: absolute;
+                    top: 70%;
+                    left: 30%;
+                }
+
+            }
+        }
+    }
+
+
+}
